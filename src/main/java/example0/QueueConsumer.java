@@ -1,4 +1,4 @@
-package examples.rabbitmq;
+package example0;
 
 import java.io.IOException;
 import java.util.HashMap;

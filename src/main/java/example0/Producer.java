@@ -1,4 +1,4 @@
-package examples.rabbitmq;
+package example0;
 
 import java.io.Serializable;
 
@@ -17,6 +17,6 @@ public class Producer extends EndPoint{
     }
 
     public void sendMessage(Serializable object) throws Exception {
-        channel.basicPublish("",endPointName, null, SerializationUtils.serialize(object));
+        channel.basicPublish("", endPointName, null, SerializationUtils.serialize(object));
     }
 }
