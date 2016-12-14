@@ -1,6 +1,5 @@
-package examples.rabbitmq;
+package example0;
 
-import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
 
@@ -24,7 +23,7 @@ public class Main {
     /**
      * @param args
      * @throws SQLException
-     * @throws IOException
+     * @throws Exception
      */
     public static void main(String[] args) throws Exception{
         new Main();
