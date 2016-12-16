@@ -3,6 +3,7 @@ package introduce;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import utils.MyUtils;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -13,7 +14,7 @@ import java.util.concurrent.TimeoutException;
 public class TestSend1 {
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("10.21.66.15");
+        factory.setHost(MyUtils.getHost());
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare("test1_queue", false, false, false, null);

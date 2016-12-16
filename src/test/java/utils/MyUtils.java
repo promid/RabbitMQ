@@ -1,5 +1,11 @@
 package utils;
 
+import org.junit.Test;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 /**
  * Created by DBQ on 2016/12/15.
  */
@@ -27,6 +33,33 @@ public class MyUtils {
         if (strings.length < 1)
             return "info";
         return strings[0];
+    }
+
+    public static String getHost(){
+        Properties prop = new Properties();
+        String host = "";
+        InputStream path = MyUtils.class.getClassLoader().getResourceAsStream("host.properties");
+        try {
+            prop.load(path);
+            host = prop.getProperty("host");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return host;
+    }
+
+    @Test
+    public void test1(){
+        Properties prop = new Properties();
+        String host = "";
+        InputStream path = MyUtils.class.getClassLoader().getResourceAsStream("host.properties");
+        try {
+            prop.load(path);
+            host = prop.getProperty("host");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(host);
     }
 
 }

@@ -13,7 +13,7 @@ import java.util.concurrent.TimeoutException;
  * Created by DBQ on 2016/12/15.
  */
 public class TestSend2 {
-    protected static final String HOST = "10.21.66.15";
+    protected static final String HOST = MyUtils.getHost();
     protected static final String TASK_QUEUE_NAME = "task_queue";
 
     public static void main(String[] args) throws IOException, TimeoutException {

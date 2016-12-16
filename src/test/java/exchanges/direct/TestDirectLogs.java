@@ -12,7 +12,7 @@ import java.util.concurrent.TimeoutException;
  * Created by DBQ on 2016/12/15.
  */
 public class TestDirectLogs {
-    protected static final String HOST = "10.21.66.15";
+    protected static final String HOST = MyUtils.getHost();
     protected static final String EXCHANGE_NAME = "direct_logs";
 
     public static void main(String[] args) throws IOException, TimeoutException {
