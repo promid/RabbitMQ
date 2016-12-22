@@ -48,6 +48,12 @@ public class MyUtils {
         return host;
     }
 
+    public static String getRouting(String[] strings){
+        if (strings.length < 1)
+            return "anonymous.info";
+        return strings[0];
+    }
+
     @Test
     public void test1(){
         Properties prop = new Properties();

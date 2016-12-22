@@ -10,8 +10,6 @@ import java.util.Arrays;
  */
 public class TestRecvDirectLogs {
 
-
-
     public static void main(String[] args) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost(TestDirectLogs.HOST);
